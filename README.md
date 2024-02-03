@@ -46,7 +46,7 @@ pnpm i
 
 The following commands are available in this project:
 
-```bash
+```javascript
 // Run the project on development mode
 pnpm dev
 
