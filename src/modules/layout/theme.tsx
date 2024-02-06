@@ -1,6 +1,4 @@
-import { DefaultTheme } from "styled-components";
-
-export const theme: DefaultTheme = {
+export const theme = {
   font: {
     family: {
       main: "'Poppins', sans-serif",
@@ -25,4 +23,4 @@ export const theme: DefaultTheme = {
     medium: "2rem",
     large: "3rem",
   },
-};
+} as const;

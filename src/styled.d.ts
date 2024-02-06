@@ -1,30 +1,10 @@
 import "styled-components";
 
+import { theme } from "./modules/layout";
+
+type MainTheme = typeof theme;
+
 declare module "styled-components" {
-  export interface DefaultTheme {
-    colors: {
-      primary: string;
-    };
-    font: {
-      family: {
-        main: string;
-      };
-      size: {
-        small: string;
-        medium: string;
-        large: string;
-      };
-      weight: {
-        light: number;
-        regular: number;
-        medium: number;
-        bold: number;
-      };
-    };
-    spacings: {
-      small: string;
-      medium: string;
-      large: string;
-    };
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends MainTheme {}
 }
