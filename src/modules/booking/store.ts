@@ -1,10 +1,5 @@
 import { create } from "zustand";
-
-type Booking = {
-  placeId: number;
-  startDate: string;
-  endDate: string;
-};
+import { Booking } from "./types";
 
 type BookingStore = {
   bookingList: Booking[];

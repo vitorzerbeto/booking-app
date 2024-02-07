@@ -17,6 +17,8 @@ export const theme = {
   },
   colors: {
     primary: "tomato",
+    white: "#ffffff",
+    offWhite: "#f6f6f0",
   },
   spacings: {
     small: "1rem",

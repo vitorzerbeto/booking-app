@@ -8,7 +8,7 @@ const ResetStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color:  #f6f6f0;
+    background-color:  ${(props) => props.theme.colors.offWhite};
   }
 
   a {
