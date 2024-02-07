@@ -1,6 +1,6 @@
 import "styled-components";
 
-import { theme } from "./modules/layout";
+import { theme } from "@/modules/layout";
 
 type MainTheme = typeof theme;
 
