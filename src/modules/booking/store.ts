@@ -74,10 +74,27 @@ export const useBookingStore = create<BookingStore>()((set) => ({
     });
   },
   editBooking: (index, booking) => {
-    set((state) => {
-      const bookingList = [...state.bookingList];
-      bookingList[index] = booking;
-      return { bookingList };
+    set(({ bookingList }) => {
+      try {
+        checkBookingOverlap(
+          bookingList.filter((_, i) => i !== index),
+          booking
+        );
+
+        const newBookingList = [...bookingList];
+        newBookingList[index] = booking;
+
+        return { bookingList: newBookingList };
+      } catch (error) {
+        if (error instanceof OverlapError) {
+          console.log(error.message);
+          alert(error.message);
+        } else {
+          console.error(error);
+        }
+
+        return { bookingList };
+      }
     });
   },
   removeBooking: (index) => {
