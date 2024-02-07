@@ -1,19 +1,12 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import DateRangePicker, {
-  DateRangePickerProps,
-} from "@wojtekmaj/react-daterange-picker";
 
 import { Button, Flex } from "@/modules/ui";
 
 import { Place, ReservationDate } from "../../types";
+import { DatePicker, DatePickerProps } from "../DatePicker";
 
-import "@wojtekmaj/react-daterange-picker/dist/DateRangePicker.css";
-import "react-calendar/dist/Calendar.css";
-
-type DateRange = Parameters<
-  Exclude<DateRangePickerProps["onChange"], undefined>
->[0];
+type DateRange = Parameters<Exclude<DatePickerProps["onChange"], undefined>>[0];
 
 type PlaceReservationProps = {
   place: Place;
@@ -62,7 +55,13 @@ export function PlaceReservation({ place, onClick }: PlaceReservationProps) {
   return (
     <PlaceContent>
       <h2>{place.name}</h2>
-      <DateRangePicker onChange={handleOnChange} value={dates} />
+      <DatePicker
+        onChange={handleOnChange}
+        value={dates}
+        rangeDivider={"to"}
+        minDate={new Date()}
+        format="MM/dd"
+      />
       <Button disabled={!isValid} onClick={handleOnClick}>
         Reserve
       </Button>
