@@ -61,6 +61,7 @@ export function PlaceReservation({ place, onClick }: PlaceReservationProps) {
         rangeDivider={"to"}
         minDate={new Date()}
         format="MM/dd"
+        data-testid="date-picker"
       />
       <Button disabled={!isValid} onClick={handleOnClick}>
         Reserve

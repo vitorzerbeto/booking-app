@@ -25,4 +25,17 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
+  overrides: [
+    {
+      files: [
+        "./**/*.test.ts",
+        "./**/*.test.tsx",
+        "./**/*.spec.ts",
+        "./**/*.spec.tsx",
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };
