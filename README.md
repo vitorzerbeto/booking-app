@@ -14,19 +14,19 @@ A basic booking experience.
 
 > _"A booking is when a guest selects a start and end date and submits a reservation on a property"_.
 
-- [ ] Store the state from bookings in a global state store
-- [ ] Prevent double (overlapping) bookings.
-- [ ] Validate the start and end dates for a booking.
-- [ ] Responsive for desktop and mobile.
+- [x] Store the state from bookings in a global state store
+- [x] Prevent double (overlapping) bookings.
+- [x] Validate the start and end dates for a booking.
+- [x] Responsive for desktop and mobile.
 
 ### Technologies
 
-- [ ] Tests
-- [ ] Documentation
+- [x] Tests
+- [x] Documentation
 - [x] Use Vite.js
 - [x] Use Typescript
 - [x] Use Styled Components
-- [ ] Error Handling
+- [x] Error Handling
 
 ## Setup
 
@@ -58,4 +58,7 @@ pnpm build
 
 // Run builded application
 pnpm preview
+
+// Run tests
+pnpm test
 ```
